@@ -45,11 +45,11 @@ static void test_parse_expect_value() {
 
 static void test_parse_invalid_value() {
   lept_value v;
-  v.type = LEPT_FLASE;
+  v.type = LEPT_FALSE;
   EXPECT_EQ_INT(LEPT_PARSE_INVALID_VALUE, lept_parse(&v, "nul"));
   EXPECT_EQ_INT(LEPT_NULL, lept_get_type(&v));
   
-  v.type = LEPT_FLASE;
+  v.type = LEPT_FALSE;
   EXPECT_EQ_INT(LEPT_PARSE_INVALID_VALUE, lept_parse(&v, "?"));
   EXPECT_EQ_INT(LEPT_NULL, lept_get_type(&v));
 }
